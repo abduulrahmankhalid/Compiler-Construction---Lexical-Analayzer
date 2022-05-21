@@ -1,0 +1,37 @@
+﻿@model ScannerWb.Models.Dictionaries
+
+@{
+    ViewData["Title"] = "Scanner_post";
+
+    string output="";
+
+    int line = 0;
+}
+
+<h2>Scanner_post</h2>
+
+<div>
+
+    @foreach (KeyValuePair<int, List<String>> token_type in Dictionaries.FinStat_Key_Token_Dic)
+    {
+
+        foreach (KeyValuePair<int, string> text_token in Dictionaries.Saved_KeyWords)
+        {
+
+            if (token_type.Key == text_token.Key)
+            {                
+
+                output = ("Line:"+ line +" Token Text: " + text_token.Value +" Token Type: " + token_type.Value[1]);
+
+                <p>@Html.Raw(output)</p>
+
+                <br/>
+                line++;
+                output = "";
+            }
+
+
+        }
+
+    }
+</div>

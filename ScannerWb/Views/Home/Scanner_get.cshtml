@@ -1,0 +1,39 @@
+﻿@model ScannerWb.Models.Dictionaries
+@{
+    ViewData["Title"] = "Scanner";
+}
+<br />
+<br />
+<br />
+<br />
+<form method="post" enctype="multipart/form-data">
+    <center>
+        <div style="background-color:#A3E4D7;width:600px;height:470px;border-radius:20px;box-shadow:1px 1px 2px #0094ff, 0 0 25px #0094ff, 0 0 5px #0094ff;">
+            <table>
+                <tr>
+                    <td style="text-align:center;"><h3 style="color:darkslategrey">Editor</h3></td>
+                </tr>
+                <tr>
+                    <td>
+                        <textarea textarea class="form-control" rows="14" cols="70" style="resize:none; background-color:#ffffff;" value="@ViewBag.Input"  name="input"></textarea>
+                    </td>
+                </tr>
+
+                <tr style="display:inline; margin:70px; ">
+                    <td style="padding-top:20px;"><input type="submit" value="Scan" class="btn btn-success" /></td>
+                </tr>
+                <tr style="display:inline; margin:30px;">
+                    <td style="padding-top:20px;"> <input type="file" id="ScanFile" name="ScanFile" class="btn btn-success" /></td>
+                </tr>
+            </table>
+        </div>
+    </center>
+    <br />
+    <hr />
+    <div style="background-color:bisque; color:black; padding-left:10px;
+            padding-top:20px; border-radius:10px; padding-bottom:20px;">
+    @await Html.PartialAsync("_result")
+        <p>Total NO of errors: @ViewBag.ErrorCount</p>
+    </div>
+    <br />
+</form>
