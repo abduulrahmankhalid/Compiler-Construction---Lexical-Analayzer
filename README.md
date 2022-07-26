@@ -11,4 +11,4 @@ can only be simple unary expression such as an identifier, a constant or
 another simple array access expression. Access to structure types can be 
 done using the “object dereferencing” operator (“.”).
 
-The Scanner is running on ASP.NET Core.
+The Scanner is Built By ASP.NET Core.
