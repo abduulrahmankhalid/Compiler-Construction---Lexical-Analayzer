@@ -1,5 +1,3 @@
-#Compiler Construction
-
 The repository contains the compiler implementation for a custom language as a part of course work for CS 419 Compilers - FCAI-HU - Based on Compiler Construction Principles and Practice Book  
 
 The language in the Project is a case sensitive object-oriented language with 
